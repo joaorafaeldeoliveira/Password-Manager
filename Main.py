@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
 import generatepassword
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
 import random
 def generatepassword():
    
@@ -31,7 +30,7 @@ def generatepassword():
         password += char
 
     password_entry.insert(0, password)
-# ---------------------------- SAVE PASSWORD ------------------------------- #
+
 def save():
 
     website = website_entry.get()  
@@ -49,14 +48,10 @@ def save():
                 website_entry.delete(0, END)
                 password_entry.delete(0, END)
     
-    
-# ---------------------------- UI SETUP ------------------------------- #
-
 window = Tk()
 window.title("Password Manager")
 window.config(padx=50, pady=50)
 
-#Create the Image on the middle of the GUI
 canvas = Canvas(height=200, width=200)
 logo_img = PhotoImage(file = "logo.png")
 canvas.create_image(100, 100,image=logo_img)
